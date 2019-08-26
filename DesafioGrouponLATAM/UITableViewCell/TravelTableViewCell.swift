@@ -104,7 +104,7 @@ class TravelTableViewCell: UITableViewCell {
         lbValue.text = String(format: "%.2f", deal.sale_price)
         
         let url = URL(string: deal.dealImage)
-        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        let data = try? Data(contentsOf: url!)
         ivThumb.image = UIImage(data: data!)
     }
 

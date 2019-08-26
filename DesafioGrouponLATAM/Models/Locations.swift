@@ -16,7 +16,20 @@ class Locations: PartLoc {
         
     }
     
+    private enum CodingKeys: String, CodingKey {
+        case location = "location"
+    }
+    
     required init(from decoder: Decoder) throws {
-        fatalError("init(from:) has not been implemented")
+        
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        location = try container.decode(Location.self, forKey: .location)
+        try super.init(from: decoder)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        try super.encode(to: encoder)
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(location, forKey: .location)
     }
 }

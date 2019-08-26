@@ -9,7 +9,7 @@
 import UIKit
 
 class ShoppingTableViewController: UITableViewController {
-    let manager = CityPresenter()
+    let manager = MenuPresenter(filename: "shopping.deals.json")
     let activyIndicator = UIActivityIndicatorView(style: .gray)
     
     let lbFail: UILabel = {

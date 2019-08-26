@@ -23,7 +23,7 @@
 		A478559723130B1A0063985F /* Partner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478559623130B1A0063985F /* Partner.swift */; };
 		A478559923130C990063985F /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478559823130C990063985F /* Review.swift */; };
 		A478559B23130CDB0063985F /* PartLoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478559A23130CDB0063985F /* PartLoc.swift */; };
-		A478559F23130E240063985F /* CityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478559E23130E240063985F /* CityPresenter.swift */; };
+		A478559F23130E240063985F /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A478559E23130E240063985F /* MenuPresenter.swift */; };
 		A47855A223131B810063985F /* ComponentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47855A123131B810063985F /* ComponentTableViewCell.swift */; };
 		A47855A523131D5F0063985F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47855A423131D5F0063985F /* String.swift */; };
 		A47855A72313281B0063985F /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47855A62313281B0063985F /* TravelTableViewController.swift */; };
@@ -57,7 +57,7 @@
 		A478559623130B1A0063985F /* Partner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partner.swift; sourceTree = "<group>"; };
 		A478559823130C990063985F /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		A478559A23130CDB0063985F /* PartLoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartLoc.swift; sourceTree = "<group>"; };
-		A478559E23130E240063985F /* CityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPresenter.swift; sourceTree = "<group>"; };
+		A478559E23130E240063985F /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		A47855A123131B810063985F /* ComponentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentTableViewCell.swift; sourceTree = "<group>"; };
 		A47855A423131D5F0063985F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A47855A62313281B0063985F /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		A478559D23130DFF0063985F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				A478559E23130E240063985F /* CityPresenter.swift */,
+				A478559E23130E240063985F /* MenuPresenter.swift */,
 				A47855B82313A2430063985F /* PersistenceManager.swift */,
 			);
 			path = Presenter;
@@ -335,7 +335,7 @@
 				A478559B23130CDB0063985F /* PartLoc.swift in Sources */,
 				A478558B2312EB380063985F /* Mobile.swift in Sources */,
 				A47855B72313783F0063985F /* BannerCollectionViewCell.swift in Sources */,
-				A478559F23130E240063985F /* CityPresenter.swift in Sources */,
+				A478559F23130E240063985F /* MenuPresenter.swift in Sources */,
 				A4785591231307800063985F /* Location.swift in Sources */,
 				A47855892312E9C10063985F /* Banner.swift in Sources */,
 				A47855A223131B810063985F /* ComponentTableViewCell.swift in Sources */,

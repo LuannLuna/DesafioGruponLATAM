@@ -9,7 +9,7 @@
 import UIKit
 
 class TravelTableViewController: UITableViewController {
-    let manager = CityPresenter()
+    let manager = MenuPresenter(filename: "travel.deals.json")
     let activyIndicator = UIActivityIndicatorView(style: .gray)
     
     let lbFail: UILabel = {

@@ -9,7 +9,7 @@
 import UIKit
 
 class CityViewController: UIViewController {
-    let manager = CityPresenter()
+    let manager = MenuPresenter(filename: "city.deals.json")
     let activyIndicator = UIActivityIndicatorView(style: .gray)
     
     var counter = 0

@@ -16,7 +16,21 @@ class Partner: PartLoc {
         
     }
     
+    private enum CodingKeys: String, CodingKey {
+        case review = "review"
+        
+    }
+    
     required init(from decoder: Decoder) throws {
-        fatalError("init(from:) has not been implemented")
+        
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        review = try container.decode(Review.self, forKey: .review)
+        try super.init(from: decoder)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        try super.encode(to: encoder)
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(review, forKey: .review)
     }
 }

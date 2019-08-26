@@ -9,15 +9,22 @@
 import Alamofire
 import SwiftyJSON
 
-class CityPresenter {
+class MenuPresenter {
     let manager = Alamofire.SessionManager.default
     
     var banners: [Banner] = []
     var categories: [Category] = []
     var deals: [Deal] = []
     
-    init() {
-        
+    let persistence = PersistenceManager()
+    
+    private var filename: String!
+    
+    init(filename: String) {
+        self.filename = filename
+        if let deals = persistence.getData(filename) {
+            self.deals = deals
+        }
     }
     
     func requestData(route: Router, onSuccess: @escaping ()->Void, onFail: @escaping ()->Void) {
@@ -56,7 +63,7 @@ class CityPresenter {
                     }
                     
                 }
-                
+                self.persistence.saveData(deals: self.deals, filename: self.filename)
                 onSuccess()
             }
         }
