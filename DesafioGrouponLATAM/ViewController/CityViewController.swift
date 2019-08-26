@@ -44,7 +44,7 @@ class CityViewController: UIViewController {
         }
         
         activyIndicator.startAnimating()
-        setupNavBar()
+        
         if manager.deals.count == 0 {
             tableView.backgroundView = activyIndicator
         }
@@ -59,6 +59,11 @@ class CityViewController: UIViewController {
                 self.tableView.backgroundView = self.lbFail
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavBar()
     }
     
     @objc func changeImage() {
@@ -103,6 +108,7 @@ class CityViewController: UIViewController {
         searchController.searchBar.placeholder = "Buscar ofertas, lugares, etc."
         tabBarController?.navigationItem.searchController = searchController
         tabBarController?.navigationItem.hidesSearchBarWhenScrolling = false
+        tabBarController?.navigationItem.largeTitleDisplayMode = .always
         
         let leftButton = UIBarButtonItem(title: "São Luís ⌵", style: .plain, target: self, action: nil)
         tabBarController?.navigationItem.leftBarButtonItem = leftButton

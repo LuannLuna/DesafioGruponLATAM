@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZG-qL-uRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-186" y="-170"/>
+            <point key="canvasLocation" x="-1904" y="576"/>
         </scene>
         <!--Viagens-->
         <scene sceneID="6pb-BX-MXM">
@@ -120,7 +120,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTb-8v-qlj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197.10144927536234" y="575.54347826086962"/>
+            <point key="canvasLocation" x="-1059" y="576"/>
         </scene>
         <!--Produtos-->
         <scene sceneID="knP-BQ-bPL">
@@ -139,7 +139,41 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihk-Z9-rLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-185" y="1265"/>
+            <point key="canvasLocation" x="-259" y="576"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="2ZU-nR-vxv">
+            <objects>
+                <viewController id="hi3-yi-M62" customClass="LocationViewController" customModule="DesafioGrouponLATAM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SnO-aF-ObM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="620"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7b3-SM-Dj0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="620"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hi3-yi-M62" id="P3i-1s-kKd"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7b3-SM-Dj0" firstAttribute="leading" secondItem="ii9-D7-4M7" secondAttribute="leading" id="5LZ-FF-ltR"/>
+                            <constraint firstItem="7b3-SM-Dj0" firstAttribute="trailing" secondItem="ii9-D7-4M7" secondAttribute="trailing" id="CUn-ib-mzb"/>
+                            <constraint firstAttribute="bottom" secondItem="7b3-SM-Dj0" secondAttribute="bottom" id="GxJ-Fv-kjk"/>
+                            <constraint firstItem="7b3-SM-Dj0" firstAttribute="top" secondItem="ii9-D7-4M7" secondAttribute="top" id="Xn7-n7-6d3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ii9-D7-4M7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Por aqui" image="navigation" id="3QN-iJ-fxZ"/>
+                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="rBL-zM-1Vl"/>
+                    <connections>
+                        <outlet property="mapView" destination="7b3-SM-Dj0" id="qEL-RC-d4I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yq3-ot-imy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528.98550724637687" y="575.54347826086962"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Ks-wI-AE3">
@@ -175,6 +209,7 @@
                         <segue destination="Wzf-rb-k3Q" kind="relationship" relationship="viewControllers" id="B16-BY-DPn"/>
                         <segue destination="7YT-7G-ISo" kind="relationship" relationship="viewControllers" id="VYl-d2-k63"/>
                         <segue destination="wlQ-eo-13v" kind="relationship" relationship="viewControllers" id="N6v-hz-yXN"/>
+                        <segue destination="hi3-yi-M62" kind="relationship" relationship="viewControllers" id="caf-4X-rrI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5o2-Tk-Sln" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -185,6 +220,7 @@
     <resources>
         <image name="cart" width="22" height="22"/>
         <image name="city" width="22" height="22"/>
+        <image name="navigation" width="22" height="22"/>
         <image name="plane" width="22" height="22"/>
     </resources>
 </document>

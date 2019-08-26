@@ -26,7 +26,7 @@ class TravelTableViewController: UITableViewController {
         tableView.register(UINib(nibName: ComponentTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: "cell")
         
         activyIndicator.startAnimating()
-        setupNavBar()
+        
         tableView.backgroundView = activyIndicator
         manager.requestData(route: Router.travel, onSuccess: {
             DispatchQueue.main.async {
@@ -39,11 +39,18 @@ class TravelTableViewController: UITableViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setupNavBar()
+    }
+    
     func setupNavBar() {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "Buscar ofertas, lugares, etc."
         tabBarController?.navigationItem.searchController = searchController
         tabBarController?.navigationItem.hidesSearchBarWhenScrolling = false
+        tabBarController?.navigationItem.largeTitleDisplayMode = .always
         
         let leftButton = UIBarButtonItem(title: "Viagens ⌵", style: .plain, target: self, action: nil)
         tabBarController?.navigationItem.leftBarButtonItem = leftButton
