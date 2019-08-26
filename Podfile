@@ -7,7 +7,6 @@ target 'DesafioGrouponLATAM' do
   use_frameworks!
   pod 'Alamofire'
   pod 'SwiftyJSON'
-  pod 'Disk'
   # Pods for DesafioGrouponLATAM
 
 end
